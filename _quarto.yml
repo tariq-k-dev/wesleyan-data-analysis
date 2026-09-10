@@ -14,7 +14,7 @@ website:
         right:
             - icon: github
               aria-label: GitHub Repository
-              href: https://github.com/your-username/wesleyan-data-analysis
+              href: https://github.com/tariq-k-dev/wesleyan-data-analysis
 
 format:
     html:
