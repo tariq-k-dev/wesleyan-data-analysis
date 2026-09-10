@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Analysis & Interpretation Portfolio",
+    "section": "",
+    "text": "Welcome to my project log for the Wesleyan Data Analysis and Interpretation Specialization. Here you will find weekly project logs, data management pipelines, and exploratory data visualization write-ups."
+  },
+  {
+    "objectID": "index.html#specialization-log",
+    "href": "index.html#specialization-log",
+    "title": "Data Analysis & Interpretation Portfolio",
+    "section": "Specialization Log",
+    "text": "Specialization Log"
+  },
+  {
+    "objectID": "C01-Data-Management-and-Visualization/module1-research-question/index.html",
+    "href": "C01-Data-Management-and-Visualization/module1-research-question/index.html",
+    "title": "Module 1: Selecting a Research Question",
+    "section": "",
+    "text": "Dataset: NESARC (or Gapminder / Add Health / Outlook)\nTopic of Interest: [Insert your topic here]"
+  },
+  {
+    "objectID": "C01-Data-Management-and-Visualization/module1-research-question/index.html#overview-selected-dataset",
+    "href": "C01-Data-Management-and-Visualization/module1-research-question/index.html#overview-selected-dataset",
+    "title": "Module 1: Selecting a Research Question",
+    "section": "",
+    "text": "Dataset: NESARC (or Gapminder / Add Health / Outlook)\nTopic of Interest: [Insert your topic here]"
+  },
+  {
+    "objectID": "C01-Data-Management-and-Visualization/module1-research-question/index.html#research-question",
+    "href": "C01-Data-Management-and-Visualization/module1-research-question/index.html#research-question",
+    "title": "Module 1: Selecting a Research Question",
+    "section": "Research Question",
+    "text": "Research Question\n[State the primary question you aim to answer through data analysis]"
+  },
+  {
+    "objectID": "C01-Data-Management-and-Visualization/module1-research-question/index.html#hypotheses",
+    "href": "C01-Data-Management-and-Visualization/module1-research-question/index.html#hypotheses",
+    "title": "Module 1: Selecting a Research Question",
+    "section": "Hypotheses",
+    "text": "Hypotheses\n\nNull Hypothesis (\\(H_0\\)):\nAlternative Hypothesis (\\(H_a\\)):"
+  }
+]
