@@ -1,0 +1,30 @@
+project:
+    type: website
+    output-dir: _site
+
+website:
+    title: "Data Analysis & Interpretation Log"
+    description: "Coursework & progress for Wesleyan Data Analysis and Interpretation Specialization"
+    site-url: "https://your-username.github.io/wesleyan-data-analysis"
+    navbar:
+        title: "Data Analysis Log"
+        left:
+            - text: "Home / Posts"
+              href: index.qmd
+        right:
+            - icon: github
+              aria-label: GitHub Repository
+              href: https://github.com/your-username/wesleyan-data-analysis
+
+format:
+    html:
+        theme:
+            light: cosmo
+            dark: darkly
+        toc: true
+        code-fold: show
+        code-tools: true
+        df-print: paged
+
+execute:
+    freeze: auto

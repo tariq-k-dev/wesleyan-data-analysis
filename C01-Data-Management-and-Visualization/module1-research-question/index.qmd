@@ -1,0 +1,21 @@
+---
+title: "Module 1: Selecting a Research Question"
+description: "Formulating a research question, identifying the dataset, and stating hypotheses."
+author: "Tariq Khan"
+date: "2026-09-10"
+categories: [C01, research-question, overview]
+---
+
+## Overview & Selected Dataset
+
+* **Dataset:** NESARC (or Gapminder / Add Health / Outlook)
+* **Topic of Interest:** [Insert your topic here]
+
+## Research Question
+
+[State the primary question you aim to answer through data analysis]
+
+## Hypotheses
+
+* **Null Hypothesis ($H_0$):** 
+* **Alternative Hypothesis ($H_a$):**

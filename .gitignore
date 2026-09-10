@@ -1,0 +1,23 @@
+# Python & Virtual Environments
+.venv/
+__pycache__/
+*.py[cod]
+
+# Quarto Build Outputs (DO NOT ignore _freeze/)
+/_site/
+/.quarto/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# OS & Editor artifacts
+.DS_Store
+.vscode/
+.idea/
+
+# Large/Sensitive Data Files
+*.csv
+*.xlsx
+*.parquet
+
+**/*.quarto_ipynb
