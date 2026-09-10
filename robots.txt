@@ -1,1 +1,1 @@
-Sitemap: https://your-username.github.io/wesleyan-data-analysis/sitemap.xml
+Sitemap: https://tariq-k-dev.github.io/wesleyan-data-analysis/sitemap.xml
