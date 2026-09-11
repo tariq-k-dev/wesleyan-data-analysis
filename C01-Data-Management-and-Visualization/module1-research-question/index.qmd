@@ -56,5 +56,5 @@ Traditional economic theory (such as the Environmental Kuznets Curve hypothesis)
 
 **References:**
 
-- Our World in Data. (2024). *CO2 and Greenhouse Gas Emissions Dataset*. GitHub repository.
-- Stern, D. I. (2004). The rise and fall of the Environmental Kuznets Curve. *World Development*, 32(8), 1419-1439.
+- Our World in Data. (2024). [*CO2 and Greenhouse Gas Emissions Dataset*](https://github.com/owid/co2-data). GitHub repository.
+- Stern, D. I. (2004). [The rise and fall of the Environmental Kuznets Curve](https://www.sciencedirect.com/science/article/pii/S0305750X04000798). *World Development*, 32(8), 1419–1439.
