@@ -42,8 +42,6 @@ This question explores whether economic growth correlates strictly with higher c
 | `renewables_share_energy` | Continuous | Share of primary energy consumption from renewables (%) |
 | `income_group` | Categorical | Derived tier based on GDP quartiles (Low, Lower-Mid, Upper-Mid, High) |
 
----
-
 ## Literature Review & Background
 
 To ground this research question in existing economic literature, I conducted a preliminary literature search using Google Scholar with key search terms including:
