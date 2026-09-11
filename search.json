@@ -18,27 +18,34 @@
     "href": "C01-Data-Management-and-Visualization/module1-research-question/index.html",
     "title": "Module 1: Selecting a Research Question",
     "section": "",
-    "text": "Dataset: NESARC (or Gapminder / Add Health / Outlook)\nTopic of Interest: [Insert your topic here]"
+    "text": "For this specialization project, I am utilizing the Our World in Data (OWID) CO2 and Greenhouse Gas Dataset. This dataset aggregates historical, geographic, and economic metrics regarding greenhouse gas emissions, energy production, and population statistics across global nations and regions.\n\nSample Size: ~50,000+ observations spanning country-level annual records from 1750 through recent years.\nPrimary Scope: Post-1990 sovereign nation data (filtering out regional aggregations and missing historical records)."
   },
   {
-    "objectID": "C01-Data-Management-and-Visualization/module1-research-question/index.html#overview-selected-dataset",
-    "href": "C01-Data-Management-and-Visualization/module1-research-question/index.html#overview-selected-dataset",
+    "objectID": "C01-Data-Management-and-Visualization/module1-research-question/index.html#dataset-overview",
+    "href": "C01-Data-Management-and-Visualization/module1-research-question/index.html#dataset-overview",
     "title": "Module 1: Selecting a Research Question",
     "section": "",
-    "text": "Dataset: NESARC (or Gapminder / Add Health / Outlook)\nTopic of Interest: [Insert your topic here]"
+    "text": "For this specialization project, I am utilizing the Our World in Data (OWID) CO2 and Greenhouse Gas Dataset. This dataset aggregates historical, geographic, and economic metrics regarding greenhouse gas emissions, energy production, and population statistics across global nations and regions.\n\nSample Size: ~50,000+ observations spanning country-level annual records from 1750 through recent years.\nPrimary Scope: Post-1990 sovereign nation data (filtering out regional aggregations and missing historical records)."
   },
   {
     "objectID": "C01-Data-Management-and-Visualization/module1-research-question/index.html#research-question",
     "href": "C01-Data-Management-and-Visualization/module1-research-question/index.html#research-question",
     "title": "Module 1: Selecting a Research Question",
     "section": "Research Question",
-    "text": "Research Question\n[State the primary question you aim to answer through data analysis]"
+    "text": "Research Question\n\n“To what extent does a nation’s level of economic development (measured by GDP per capita) influence its per capita CO2 emissions and its reliance on renewable energy sources?”\n\nThis question explores whether economic growth correlates strictly with higher carbon footprints, or whether higher-income economies exhibit a structural transition toward cleaner energy mixes."
   },
   {
     "objectID": "C01-Data-Management-and-Visualization/module1-research-question/index.html#hypotheses",
     "href": "C01-Data-Management-and-Visualization/module1-research-question/index.html#hypotheses",
     "title": "Module 1: Selecting a Research Question",
     "section": "Hypotheses",
-    "text": "Hypotheses\n\nNull Hypothesis (\\(H_0\\)):\nAlternative Hypothesis (\\(H_a\\)):"
+    "text": "Hypotheses\n\nHypothesis 1 (Continuous Relationship): Higher GDP per capita is significantly positively correlated with per capita CO2 emissions (\\(CO_2 / \\text{person}\\)).\nHypothesis 2 (Categorical Comparison): Nations classified into higher income tiers (e.g., High Income vs. Low Income) will exhibit significantly higher mean per capita CO2 emissions (to be tested via ANOVA).\nHypothesis 3 (Energy Transition): Higher-income nations are more likely to achieve a high renewable share (&gt;20% primary energy) compared to lower-income nations (to be tested via Chi-Square)."
+  },
+  {
+    "objectID": "C01-Data-Management-and-Visualization/module1-research-question/index.html#key-variables-of-interest",
+    "href": "C01-Data-Management-and-Visualization/module1-research-question/index.html#key-variables-of-interest",
+    "title": "Module 1: Selecting a Research Question",
+    "section": "Key Variables of Interest",
+    "text": "Key Variables of Interest\n\n\n\n\n\n\n\n\nVariable Name\nType\nDescription\n\n\n\n\ncountry\nNominal\nSovereign nation or region name\n\n\nyear\nDiscrete\nObservation year (filtered for \\(\\ge 1990\\))\n\n\ngdp_per_capita\nContinuous\nGross domestic product per person (International-$)\n\n\nco2_per_capita\nContinuous\nCarbon dioxide emissions in metric tonnes per person\n\n\nrenewables_share_energy\nContinuous\nShare of primary energy consumption from renewables (%)\n\n\nincome_group\nCategorical\nDerived tier based on GDP quartiles (Low, Lower-Mid, Upper-Mid, High)"
   }
 ]

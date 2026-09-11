@@ -8,7 +8,7 @@
 
 <meta name="author" content="Tariq Khan">
 <meta name="dcterms.date" content="2026-09-10">
-<meta name="description" content="Formulating a research question, identifying the dataset, and stating hypotheses.">
+<meta name="description" content="Selecting the OWID CO2 dataset, defining the primary research question, and outlining operational hypotheses.">
 
 <title>Module 1: Selecting a Research Question – Data Analysis &amp; Interpretation Log</title>
 <style>
@@ -356,9 +356,10 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview-selected-dataset" id="toc-overview-selected-dataset" class="nav-link active" data-scroll-target="#overview-selected-dataset">Overview &amp; Selected Dataset</a></li>
+  <li><a href="#dataset-overview" id="toc-dataset-overview" class="nav-link active" data-scroll-target="#dataset-overview">Dataset Overview</a></li>
   <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
   <li><a href="#hypotheses" id="toc-hypotheses" class="nav-link" data-scroll-target="#hypotheses">Hypotheses</a></li>
+  <li><a href="#key-variables-of-interest" id="toc-key-variables-of-interest" class="nav-link" data-scroll-target="#key-variables-of-interest">Key Variables of Interest</a></li>
   </ul>
 </nav>
     </div>
@@ -371,14 +372,14 @@ window.Quarto = {
 <div class="quarto-title-block"><div><h1 class="title">Module 1: Selecting a Research Question</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
   <div class="quarto-categories">
     <div class="quarto-category">C01</div>
-    <div class="quarto-category">research-question</div>
-    <div class="quarto-category">overview</div>
+    <div class="quarto-category">RESEARCH-QUESTION</div>
+    <div class="quarto-category">OVERVIEW</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Formulating a research question, identifying the dataset, and stating hypotheses.
+    Selecting the OWID CO2 dataset, defining the primary research question, and outlining operational hypotheses.
   </div>
 </div>
 
@@ -407,23 +408,80 @@ window.Quarto = {
 </header>
 
 
-<section id="overview-selected-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="overview-selected-dataset">Overview &amp; Selected Dataset</h2>
+<section id="dataset-overview" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-overview">Dataset Overview</h2>
+<p>For this specialization project, I am utilizing the <strong>Our World in Data (OWID) CO2 and Greenhouse Gas Dataset</strong>. This dataset aggregates historical, geographic, and economic metrics regarding greenhouse gas emissions, energy production, and population statistics across global nations and regions.</p>
 <ul>
-<li><strong>Dataset:</strong> NESARC (or Gapminder / Add Health / Outlook)</li>
-<li><strong>Topic of Interest:</strong> [Insert your topic here]</li>
+<li><strong>Sample Size:</strong> ~50,000+ observations spanning country-level annual records from 1750 through recent years.</li>
+<li><strong>Primary Scope:</strong> Post-1990 sovereign nation data (filtering out regional aggregations and missing historical records).</li>
 </ul>
+<hr>
 </section>
 <section id="research-question" class="level2">
 <h2 class="anchored" data-anchor-id="research-question">Research Question</h2>
-<p>[State the primary question you aim to answer through data analysis]</p>
+<blockquote class="blockquote">
+<p><strong>“To what extent does a nation’s level of economic development (measured by GDP per capita) influence its per capita CO2 emissions and its reliance on renewable energy sources?”</strong></p>
+</blockquote>
+<p>This question explores whether economic growth correlates strictly with higher carbon footprints, or whether higher-income economies exhibit a structural transition toward cleaner energy mixes.</p>
+<hr>
 </section>
 <section id="hypotheses" class="level2">
 <h2 class="anchored" data-anchor-id="hypotheses">Hypotheses</h2>
 <ul>
-<li><strong>Null Hypothesis (<span class="math inline">\(H_0\)</span>):</strong></li>
-<li><strong>Alternative Hypothesis (<span class="math inline">\(H_a\)</span>):</strong></li>
+<li><strong>Hypothesis 1 (Continuous Relationship):</strong> Higher GDP per capita is significantly positively correlated with per capita CO2 emissions (<span class="math inline">\(CO_2 / \text{person}\)</span>).</li>
+<li><strong>Hypothesis 2 (Categorical Comparison):</strong> Nations classified into higher income tiers (e.g., High Income vs.&nbsp;Low Income) will exhibit significantly higher mean per capita CO2 emissions (to be tested via ANOVA).</li>
+<li><strong>Hypothesis 3 (Energy Transition):</strong> Higher-income nations are more likely to achieve a high renewable share (&gt;20% primary energy) compared to lower-income nations (to be tested via Chi-Square).</li>
 </ul>
+<hr>
+</section>
+<section id="key-variables-of-interest" class="level2">
+<h2 class="anchored" data-anchor-id="key-variables-of-interest">Key Variables of Interest</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>country</code></td>
+<td style="text-align: left;">Nominal</td>
+<td style="text-align: left;">Sovereign nation or region name</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>year</code></td>
+<td style="text-align: left;">Discrete</td>
+<td style="text-align: left;">Observation year (filtered for <span class="math inline">\(\ge 1990\)</span>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>gdp_per_capita</code></td>
+<td style="text-align: left;">Continuous</td>
+<td style="text-align: left;">Gross domestic product per person (International-$)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>co2_per_capita</code></td>
+<td style="text-align: left;">Continuous</td>
+<td style="text-align: left;">Carbon dioxide emissions in metric tonnes per person</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>renewables_share_energy</code></td>
+<td style="text-align: left;">Continuous</td>
+<td style="text-align: left;">Share of primary energy consumption from renewables (%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>income_group</code></td>
+<td style="text-align: left;">Categorical</td>
+<td style="text-align: left;">Derived tier based on GDP quartiles (Low, Lower-Mid, Upper-Mid, High)</td>
+</tr>
+</tbody>
+</table>
 
 
 <!-- -->
@@ -897,25 +955,47 @@ window.Quarto = {
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Module 1: Selecting a Research Question"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Formulating a research question, identifying the dataset, and stating hypotheses."</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Tariq Khan"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-09-10"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [C01, research-question, overview]</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Tariq Khan"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-09-10"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [C01, RESEARCH-QUESTION, OVERVIEW]</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Selecting the OWID CO2 dataset, defining the primary research question, and outlining operational hypotheses."</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview &amp; Selected Dataset</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dataset Overview</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Dataset:** NESARC (or Gapminder / Add Health / Outlook)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Topic of Interest:** <span class="co">[</span><span class="ot">Insert your topic here</span><span class="co">]</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research Question</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>For this specialization project, I am utilizing the **Our World in Data (OWID) CO2 and Greenhouse Gas Dataset**. This dataset aggregates historical, geographic, and economic metrics regarding greenhouse gas emissions, energy production, and population statistics across global nations and regions.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Sample Size:** ~50,000+ observations spanning country-level annual records from 1750 through recent years.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Primary Scope:** Post-1990 sovereign nation data (filtering out regional aggregations and missing historical records).</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">State the primary question you aim to answer through data analysis</span><span class="co">]</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Hypotheses</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research Question</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Null Hypothesis ($H_0$):** </span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Alternative Hypothesis ($H_a$):**</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **"To what extent does a nation's level of economic development (measured by GDP per capita) influence its per capita CO2 emissions and its reliance on renewable energy sources?"**</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>This question explores whether economic growth correlates strictly with higher carbon footprints, or whether higher-income economies exhibit a structural transition toward cleaner energy mixes.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Hypotheses</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Hypothesis 1 (Continuous Relationship):** Higher GDP per capita is significantly positively correlated with per capita CO2 emissions ($CO_2 / \text{person}$).</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Hypothesis 2 (Categorical Comparison):** Nations classified into higher income tiers (e.g., High Income vs. Low Income) will exhibit significantly higher mean per capita CO2 emissions (to be tested via ANOVA).</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Hypothesis 3 (Energy Transition):** Higher-income nations are more likely to achieve a high renewable share (&gt;20% primary energy) compared to lower-income nations (to be tested via Chi-Square).</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Variables of Interest</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Variable Name <span class="pp">|</span> Type <span class="pp">|</span> Description <span class="pp">|</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">| :---</span> <span class="pp">|</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`country`</span> <span class="pp">|</span> Nominal <span class="pp">|</span> Sovereign nation or region name <span class="pp">|</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`year`</span> <span class="pp">|</span> Discrete <span class="pp">|</span> Observation year (filtered for $\ge 1990$) <span class="pp">|</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`gdp_per_capita`</span> <span class="pp">|</span> Continuous <span class="pp">|</span> Gross domestic product per person (International-$) <span class="pp">|</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`co2_per_capita`</span> <span class="pp">|</span> Continuous <span class="pp">|</span> Carbon dioxide emissions in metric tonnes per person <span class="pp">|</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`renewables_share_energy`</span> <span class="pp">|</span> Continuous <span class="pp">|</span> Share of primary energy consumption from renewables (%) <span class="pp">|</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`income_group`</span> <span class="pp">|</span> Categorical <span class="pp">|</span> Derived tier based on GDP quartiles (Low, Lower-Mid, Upper-Mid, High) <span class="pp">|</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
