@@ -1,21 +1,43 @@
 ---
 title: "Module 1: Selecting a Research Question"
-description: "Formulating a research question, identifying the dataset, and stating hypotheses."
 author: "Tariq Khan"
 date: "2026-09-10"
-categories: [C01, research-question, overview]
+categories: [C01, RESEARCH-QUESTION, OVERVIEW]
+description: "Selecting the OWID CO2 dataset, defining the primary research question, and outlining operational hypotheses."
 ---
 
-## Overview & Selected Dataset
+## Dataset Overview
 
-* **Dataset:** NESARC (or Gapminder / Add Health / Outlook)
-* **Topic of Interest:** [Insert your topic here]
+For this specialization project, I am utilizing the **Our World in Data (OWID) CO2 and Greenhouse Gas Dataset**. This dataset aggregates historical, geographic, and economic metrics regarding greenhouse gas emissions, energy production, and population statistics across global nations and regions.
+
+* **Sample Size:** ~50,000+ observations spanning country-level annual records from 1750 through recent years.
+* **Primary Scope:** Post-1990 sovereign nation data (filtering out regional aggregations and missing historical records).
+
+---
 
 ## Research Question
 
-[State the primary question you aim to answer through data analysis]
+> **"To what extent does a nation's level of economic development (measured by GDP per capita) influence its per capita CO2 emissions and its reliance on renewable energy sources?"**
+
+This question explores whether economic growth correlates strictly with higher carbon footprints, or whether higher-income economies exhibit a structural transition toward cleaner energy mixes.
+
+---
 
 ## Hypotheses
 
-* **Null Hypothesis ($H_0$):** 
-* **Alternative Hypothesis ($H_a$):**
+* **Hypothesis 1 (Continuous Relationship):** Higher GDP per capita is significantly positively correlated with per capita CO2 emissions ($CO_2 / \text{person}$).
+* **Hypothesis 2 (Categorical Comparison):** Nations classified into higher income tiers (e.g., High Income vs. Low Income) will exhibit significantly higher mean per capita CO2 emissions (to be tested via ANOVA).
+* **Hypothesis 3 (Energy Transition):** Higher-income nations are more likely to achieve a high renewable share (>20% primary energy) compared to lower-income nations (to be tested via Chi-Square).
+
+---
+
+## Key Variables of Interest
+
+| Variable Name | Type | Description |
+| :--- | :--- | :--- |
+| `country` | Nominal | Sovereign nation or region name |
+| `year` | Discrete | Observation year (filtered for $\ge 1990$) |
+| `gdp_per_capita` | Continuous | Gross domestic product per person (International-$) |
+| `co2_per_capita` | Continuous | Carbon dioxide emissions in metric tonnes per person |
+| `renewables_share_energy` | Continuous | Share of primary energy consumption from renewables (%) |
+| `income_group` | Categorical | Derived tier based on GDP quartiles (Low, Lower-Mid, Upper-Mid, High) |
