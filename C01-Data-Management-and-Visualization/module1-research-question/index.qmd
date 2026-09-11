@@ -47,12 +47,14 @@ This question explores whether economic growth correlates strictly with higher c
 ## Literature Review & Background
 
 To ground this research question in existing economic literature, I conducted a preliminary literature search using Google Scholar with key search terms including:
-* `"Environmental Kuznets Curve CO2 GDP per capita"`
-* `"renewable energy transition economic development"`
 
-**Key Context:** 
+- `"Environmental Kuznets Curve CO2 GDP per capita"`
+- `"renewable energy transition economic development"`
+
+**Key Context:**  
 Traditional economic theory (such as the Environmental Kuznets Curve hypothesis) suggests that environmental degradation increases during early economic development but begins to decline past a certain income threshold as nations invest in cleaner technology.
 
 **References:**
-* Our World in Data. (2024). *CO2 and Greenhouse Gas Emissions Dataset*. GitHub repository.
-* Stern, D. I. (2004). The rise and fall of the Environmental Kuznets Curve. *World Development*, 32(8), 1419-1439.
+
+- Our World in Data. (2024). *CO2 and Greenhouse Gas Emissions Dataset*. GitHub repository.
+- Stern, D. I. (2004). The rise and fall of the Environmental Kuznets Curve. *World Development*, 32(8), 1419-1439.
