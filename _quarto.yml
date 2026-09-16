@@ -16,6 +16,8 @@ website:
             - icon: github
               aria-label: GitHub Repository
               href: https://github.com/tariq-k-dev/wesleyan-data-analysis
+    page-footer:
+        center: '© <span id="year"></span> Tariq Khan. All rights reserved.'
 
 format:
     html:
@@ -26,6 +28,7 @@ format:
         code-fold: show
         code-tools: true
         df-print: paged
+        include-after-body: footer-year.html
 
 execute:
     freeze: auto
