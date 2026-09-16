@@ -7,8 +7,6 @@ website:
     description: "Coursework & progress for Wesleyan Data Analysis and Interpretation Specialization"
     site-url: "https://tariq-k-dev.github.io/wesleyan-data-analysis"
     favicon: favicon.png
-    page-footer:
-        right: "Favicon by <a href='https://www.flaticon.com/free-icons/analysis' title='analysis icons'>deemakdaksina - Flaticon</a>"
     navbar:
         title: "Data Analysis Log"
         left:
