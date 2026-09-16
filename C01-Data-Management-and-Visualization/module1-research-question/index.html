@@ -507,11 +507,63 @@ Traditional economic theory (such as the Environmental Kuznets Curve hypothesis)
 </main> <!-- /main -->
 <script>
 
+    function patchFormInputs() {
+
+        // Target Quarto navbar search, listing filter inputs, and standard inputs
+
+        const searchInputs = document.querySelectorAll(
+
+            "input.search, input.form-control, input.quarto-search-input, input[type='search'], .aa-Input"
+
+        );
+
+        searchInputs.forEach(function (input, index) {
+
+            if (!input.hasAttribute("name")) {
+
+                input.setAttribute("name", "site-search-" + (index + 1));
+
+            }
+
+            if (!input.hasAttribute("id")) {
+
+                input.setAttribute("id", "site-search-input-" + (index + 1));
+
+            }
+
+            if (!input.hasAttribute("autocomplete")) {
+
+                input.setAttribute("autocomplete", "off");
+
+            }
+
+        });
+
+    }
+
+
+
     document.addEventListener("DOMContentLoaded", function () {
 
-        const el = document.getElementById("year");
+        // Set dynamic copyright year
 
-        if (el) el.textContent = new Date().getFullYear();
+        const yearEl = document.getElementById("year");
+
+        if (yearEl) {
+
+            yearEl.textContent = new Date().getFullYear();
+
+        }
+
+
+
+        // Run input attribute patch
+
+        patchFormInputs();
+
+        // Run again shortly after to catch client-side rendered Quarto listing components
+
+        setTimeout(patchFormInputs, 300);
 
     });
 
